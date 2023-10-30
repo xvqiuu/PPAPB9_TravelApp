@@ -35,8 +35,7 @@ class HomeFragment : Fragment() {
 
         with(binding){
             btnExplore.setOnClickListener {
-                val navController = findNavController()
-                navController.navigate(R.id.ticketFragment)
+                findNavController().navigate(R.id.ticketFragment)
             }
         }
     }

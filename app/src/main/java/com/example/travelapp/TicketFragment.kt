@@ -35,10 +35,9 @@ class TicketFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         with(binding){
-            val action = TicketFragmentDirections.actionTicketFragmentToOrderFragment4();
             btnBuyticket.setOnClickListener {
                 //mengatur perpindahan antar fragment
-                findNavController().navigate(action)
+                findNavController().navigate(R.id.orderFragment)
             }
         }
     }

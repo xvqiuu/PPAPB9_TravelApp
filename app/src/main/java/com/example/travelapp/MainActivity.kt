@@ -2,7 +2,7 @@ package com.example.travelapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
+import androidx.appcompat.widget.Toolbar
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.travelapp.databinding.ActivityMainBinding
@@ -13,18 +13,19 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        title = "TravelApp"
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar) // Mengatur Toolbar sebagai ActionBar
+        supportActionBar?.title = "TravelApp" // Memberikan judul pada Action Bar
 
         with(binding) {
             val navController = findNavController(R.id.nav_host_fragment)
             bottomNavigationView.setupWithNavController(navController)
+
         }
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.menu_options, menu)
-        return super.onCreateOptionsMenu(menu)
-    }
 }

@@ -29,10 +29,10 @@
         />
 
     <Button
-        android:id="@+id/btn_buyorder"
+        android:id="@+id/btn_done"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Buy Ticket"
+        android:text="Selesai"
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/blue"
         />

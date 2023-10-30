@@ -56,6 +56,9 @@ class OrderFragment : Fragment() {
                     edtTicketType.setText(res)
                 }
             }
+            btnBuyorder.setOnClickListener {
+                findNavController().navigate(R.id.homeFragment)
+            }
         }
     }
 }

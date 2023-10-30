@@ -54,32 +54,7 @@ class TypeFragment : Fragment() {
             adapterTicketType.setDropDownViewResource(com.google.android.material.R.layout.support_simple_spinner_dropdown_item)
             spinnerTicketType.adapter = adapterTicketType
 
-            spinnerTicketType.onItemSelectedListener =
-                object : AdapterView.OnItemSelectedListener {
-                    override fun onItemSelected(
-                        parent: AdapterView<*>?,
-                        view: View?,
-                        position: Int,
-                        id: Long
-                    ) {
-                        val tickettype = tickettyped[position]
-                        Toast.makeText(
-                            this@TypeFragment.requireContext(),
-                            tickettype,
-                            Toast.LENGTH_SHORT
-                        ).show()
-
-                        val selectedItem = spinnerTicketType.selectedItem.toString()
-                        val bundle = Bundle()
-                        bundle.putString("typeTicket", selectedItem)
-                    }
-
-                    override fun onNothingSelected(parent: AdapterView<*>?) {
-                        // Metode ini akan dipanggil jika tidak ada item yang dipilih
-                    }
-                }
-
-            btnBuyorder.setOnClickListener {
+            btnDone.setOnClickListener {
                 // Mengirim data ke orderfragment
                 findNavController().apply {
                     previousBackStackEntry?.savedStateHandle?.
