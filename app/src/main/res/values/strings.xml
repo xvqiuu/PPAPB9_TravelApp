@@ -6,7 +6,7 @@
     <array name="tickettype">
         <item>First Class Ticket</item>
         <item>Business Class Ticket</item>
-        <item>Econony Class Ticket</item>
+        <item>Economy Class Ticket</item>
     </array>
 
 </resources>

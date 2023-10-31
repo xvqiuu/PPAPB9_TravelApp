@@ -39,10 +39,6 @@ class OrderFragment : Fragment() {
 
         with(binding) {
 
-            btnBuyorder.setOnClickListener{
-                findNavController().navigateUp()
-            }
-
             edtTicketType.setOnClickListener {
                 val action = OrderFragmentDirections.actionOrderFragmentToTypeFragment()
                 findNavController().navigate(action)
